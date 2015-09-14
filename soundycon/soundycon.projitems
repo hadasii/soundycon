@@ -10,5 +10,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)soundycon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)views\MainPage.cs">
+      <DependentUpon>MainPage.cshtml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)views\MainPage.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>MainPage.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>
